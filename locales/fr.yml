@@ -1,0 +1,75 @@
+fr:
+  vgh:
+    emoji:
+      success:  "✅"
+      info:     "🔍"
+      ongoing:  "🔁"
+      warning:  "⚠️"
+      error:    "❌"
+      version:  "💾"
+      broom:    "🧹"
+      question: "❓"
+    messages:
+      not_a_repo: "Pas un dépôt git — hooks ignorés."
+      no_hooks: "Aucun hook git configuré."
+      installed: "%{count} hook(s) git installé(s)."
+      backed_up: "Hook(s) préexistant(s) sauvegardé(s) : %{list}."
+      removed: "%{count} hook(s) git géré(s) supprimé(s)."
+      restored: "%{count} hook(s) préexistant(s) restauré(s)."
+      list_header: "Hooks git gérés par le plugin :"
+    usage:
+      banner: "Utilisation : vagrant hooks <install|uninstall|list|run|version|help> [options]"
+      run: "Utilisation : vagrant hooks run <hook> [args...]"
+    errors:
+      unknown_command: "Commande inconnue. Essayez : vagrant hooks help."
+      no_machine: "Aucune machine cible. Lancez ceci dans un projet Vagrant ou passez un nom de VM."
+      not_a_repo: "Pas un dépôt git. Lancez ceci dans une copie de travail git."
+      cancelled: "Annulé par l'utilisateur."
+      confirmation_required: "Confirmation requise : ajoutez --yes pour confirmer en mode --json."
+      hook_not_configured: "Le hook '%{name}' n'est pas configuré dans ce Vagrantfile."
+    prompts:
+      uninstall: "Ceci supprimera tous les hooks gérés et restaurera les sauvegardes. Continuer ? [y/N]"
+    log:
+      version_line: "v%{version}."
+    help:
+      general_title: "Utilisation : vagrant hooks <commande> [args] [options]"
+      commands:
+        install:   "hooks install            Installe les hooks configurés dans .git/hooks"
+        uninstall: "hooks uninstall          Supprime les hooks gérés et restaure les sauvegardes"
+        list:      "hooks list               Affiche les hooks gérés et leur état"
+        run:       "hooks run <hook> [args]  Exécute un hook configuré à la demande (hôte)"
+        version:   "hooks version            Affiche la version du plugin"
+        help:      "hooks help [SUJET]       Affiche cette aide ou celle d'une sous-commande"
+      topic:
+        install: |
+          🔧 Aide : vagrant hooks install
+            Utilisation :
+              vagrant hooks install [--dry-run] [--json]
+            Description :
+              Écrit chaque hook configuré dans le dossier de hooks du dépôt avec un
+              en-tête géré. Un hook préexistant non géré est sauvegardé en
+              <hook>.bak avant d'être remplacé.
+        uninstall: |
+          🧹 Aide : vagrant hooks uninstall
+            Utilisation :
+              vagrant hooks uninstall [--yes] [--json]
+            Description :
+              Supprime les hooks gérés par le plugin et restaure toute sauvegarde <hook>.bak.
+        list: |
+          📋 Aide : vagrant hooks list
+            Utilisation :
+              vagrant hooks list [--json]
+            Description :
+              Affiche chaque hook avec son état : installed, missing, modified ou foreign.
+        run: |
+          ▶️  Aide : vagrant hooks run
+            Utilisation :
+              vagrant hooks run <hook> [args...]
+            Description :
+              Exécute un hook configuré sur l'hôte, utile pour le tester sans commit.
+        version: |
+          💾 Aide : vagrant hooks version
+            Utilisation :
+              vagrant hooks version [--json]
+            Description :
+              Affiche la version du plugin.
