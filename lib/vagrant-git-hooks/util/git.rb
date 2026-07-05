@@ -35,6 +35,13 @@ module VagrantGitHooks
           File.join(toplevel(root) || root.to_s, ".git", "vagrant-git-hooks.json")
       end
 
+      # Resolves a path under the repository's real hooks directory via
+      # `git rev-parse --git-path`, rather than assuming `.git/<name>`, so
+      # `core.hooksPath` and worktrees are honored.
+      #
+      # @param root [String, Pathname] Git repository root.
+      # @param name [String] Path fragment relative to the git directory.
+      # @return [String, nil] Absolute path, or nil when git can't resolve it.
       def resolve(root, name)
         out, _err, st = capture(root, "rev-parse", "--git-path", name)
         return nil unless st.success?
