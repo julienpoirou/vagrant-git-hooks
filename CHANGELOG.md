@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.2.1](https://github.com/julienpoirou/vagrant-git-hooks/compare/v0.2.0...v0.2.1) (2026-07-05)
+
+
+### Corrections 🐛
+
+* Keep lib/VERSION in sync via release-please's x-release-please-version annotation ([6bdce6b](https://github.com/julienpoirou/vagrant-git-hooks/commit/6bdce6b94e35b9abe82970a1fcd638734b65a341))
+* Keep lib/VERSION in sync via release-please's x-release-please-version annotation ([e2d7c73](https://github.com/julienpoirou/vagrant-git-hooks/commit/e2d7c73ec13eecfb281f57843be54395420a14e1))
+* Keep lib/VERSION in sync via release-please's x-release-please-version annotation ([fc800f9](https://github.com/julienpoirou/vagrant-git-hooks/commit/fc800f9feb506660d589af809b2902a90fa46d90))
+* Keep lib/VERSION in sync via release-please's x-release-please-version annotation ([1b3e652](https://github.com/julienpoirou/vagrant-git-hooks/commit/1b3e652cc0f593bd9d38d32bba3bc6423670b2d5))
+
 ## [0.2.0](https://github.com/julienpoirou/vagrant-git-hooks/compare/v0.1.0...v0.2.0) (2026-07-05)
 
 
