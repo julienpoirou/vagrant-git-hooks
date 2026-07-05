@@ -81,6 +81,7 @@ RSpec/SpecFilePathFormat:
     - 'spec/installer_spec.rb'
     - 'spec/manifest_spec.rb'
     - 'spec/service_spec.rb'
+    - 'spec/verbose_spec.rb'
 
 # Offense count: 4
 # Configuration parameters: IgnoreNameless, IgnoreSymbolicNames.
