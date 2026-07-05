@@ -181,7 +181,6 @@ module VagrantGitHooks
       0
     end
 
-
     def git_repo?(root)
       Util::Git.available? && Util::Git.repo?(root)
     end

@@ -39,7 +39,7 @@ RSpec.describe VagrantGitHooks::Config do
       pre-auto-gc reference-transaction
       p4-changelist p4-prepare-changelist p4-post-changelist p4-pre-submit
     ]
-    c = cfg(hooks: extra.each_with_object({}) { |h, acc| acc[h] = "echo #{h}" })
+    c = cfg(hooks: extra.to_h { |h| [h, "echo #{h}"] })
     expect(errors(c)).to be_empty
   end
 
