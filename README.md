@@ -1,5 +1,14 @@
 # vagrant-git-hooks
 
+[![CI](https://github.com/julienpoirou/vagrant-git-hooks/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/julienpoirou/vagrant-git-hooks/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/julienpoirou/vagrant-git-hooks/actions/workflows/codeql.yml/badge.svg)](https://github.com/julienpoirou/vagrant-git-hooks/actions/workflows/codeql.yml)
+[![Release](https://img.shields.io/github/v/release/julienpoirou/vagrant-git-hooks?include_prereleases&sort=semver)](https://github.com/julienpoirou/vagrant-git-hooks/releases)
+[![RubyGems](https://img.shields.io/gem/v/vagrant-git-hooks.svg)](https://rubygems.org/gems/vagrant-git-hooks)
+[![License](https://img.shields.io/github/license/julienpoirou/vagrant-git-hooks.svg)](LICENSE.md)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196.svg)](https://www.conventionalcommits.org)
+[![Renovate](https://img.shields.io/badge/Renovate-enabled-brightgreen.svg)](https://renovatebot.com)
+[![Total downloads](https://img.shields.io/gem/dt/vagrant-git-hooks?logo=rubygems&label=downloads)](https://rubygems.org/gems/vagrant-git-hooks)
+
 🇬🇧 English · [🇫🇷 Français](./README.fr.md)
 
 Manage your project's **git hooks from the Vagrantfile** — a [husky](https://github.com/typicode/husky)
