@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "vagrant-git-hooks"
-  s.version     = File.read(File.join(__dir__, "lib/vagrant-git-hooks/VERSION")).strip
+  s.version     = File.read(File.join(__dir__, "lib/vagrant-git-hooks/VERSION")).split("#").first.strip
   s.summary     = "Manage git hooks from your Vagrantfile — a husky replacement with no Node/npm dependency"
   s.description = <<~DESC.strip
     Adds a `vagrant hooks` subcommand and installs declarative git hooks into the
@@ -34,7 +34,6 @@ Gem::Specification.new do |s|
     "rubygems_mfa_required" => "true",
     "bug_tracker_uri" => "https://github.com/julienpoirou/vagrant-git-hooks/issues",
     "changelog_uri" => "https://github.com/julienpoirou/vagrant-git-hooks/blob/main/CHANGELOG.md",
-    "documentation_uri" => "https://www.rubydoc.info/gems/vagrant-git-hooks/",
     "source_code_uri" => "https://github.com/julienpoirou/vagrant-git-hooks",
     "homepage_uri" => "https://github.com/julienpoirou/vagrant-git-hooks"
   }
