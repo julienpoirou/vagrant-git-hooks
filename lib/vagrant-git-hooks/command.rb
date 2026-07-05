@@ -13,6 +13,8 @@ require_relative "util/verbose"
 require_relative "version"
 
 module VagrantGitHooks
+  # Falls back to a minimal stand-in outside a real Vagrant environment
+  # (spec suite, rake tasks) so Command stays loadable and testable there.
   BASE_CMD = if defined?(Vagrant) && Vagrant.respond_to?(:plugin)
                Vagrant.plugin("2", :command)
              else
@@ -94,6 +96,9 @@ module VagrantGitHooks
       yield root.to_s, cfg
     end
 
+    # Applies the Vagrantfile locale only when nothing more specific already
+    # picked one: an explicit --lang flag or a VGH_LANG env var both take
+    # precedence, since setup_i18n! already resolved the latter at startup.
     def resolve_cli_locale!(cfg)
       return if @opts[:lang]
       return unless ENV["VGH_LANG"].to_s.strip.empty?
