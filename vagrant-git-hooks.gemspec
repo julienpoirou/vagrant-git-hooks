@@ -34,6 +34,7 @@ Gem::Specification.new do |s|
     "rubygems_mfa_required" => "true",
     "bug_tracker_uri" => "https://github.com/julienpoirou/vagrant-git-hooks/issues",
     "changelog_uri" => "https://github.com/julienpoirou/vagrant-git-hooks/blob/main/CHANGELOG.md",
+    "documentation_uri" => "https://www.rubydoc.info/gems/vagrant-git-hooks/",
     "source_code_uri" => "https://github.com/julienpoirou/vagrant-git-hooks",
     "homepage_uri" => "https://github.com/julienpoirou/vagrant-git-hooks"
   }
